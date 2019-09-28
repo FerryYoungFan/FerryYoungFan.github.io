@@ -3,7 +3,7 @@
 var p; // shortcut to reference prototypes
 var lib={};var ss={};var img={};
 lib.ssMetadata = [
-		{name:"HelloWorld_atlas_", frames: [[446,252,444,250],[0,0,444,250],[446,0,444,250],[0,252,444,250],[446,504,444,250],[446,756,444,250],[0,504,444,250],[0,756,444,250]]}
+		{name:"HelloWorld_atlas_", frames: [[0,504,444,250],[0,0,444,250],[446,0,444,250],[0,756,444,250],[0,252,444,250],[446,252,444,250],[446,504,444,250],[446,756,444,250]]}
 ];
 
 
@@ -389,7 +389,7 @@ p.nominalBounds = null;
 	// 图层_4
 	this.instance = new lib.元件5();
 	this.instance.parent = this;
-	this.instance.setTransform(404.5,684.4,1.371,1.371,0,0,0,218.8,34.1);
+	this.instance.setTransform(420.5,284.4,1.371,1.371,0,0,0,218.8,34.1);
 	this.instance.alpha = 0;
 	this.instance._off = true;
 
@@ -397,21 +397,21 @@ p.nominalBounds = null;
 
 	// 图层_1
 	this.shape = new cjs.Shape();
-	this.shape.graphics.f("#333333").s().p("AQVF+QhGhVAAibQABhmAlhJQAlhJA9gnQA+gpBJAAQA1AAAqAUQApAUAqAhIgFlhIBdAAIAAOVIhMAAIgKhJIgCAAQglAlgyAZQgxAag5AAQh2AAhEhUgASNhLQgrAggYA4QgZA3AABIQAAB1AvBBQAtBBBWgBQAtAAApgUQAqgXAogsIAAlQQgqgmgngPQglgRgoAAQg2ABgqAfgALUGyQgXgigBg+IAAsiIBeAAIAAMoQAAAYAIAKQAIAKANAAIAJAAIAMgCIAOBJQgLAEgNABQgMACgUAAQg1gBgZgfgAlNGsQhBgmgnhKQgnhIgBhmQABhqAnhHQAnhKBBglQBBgoBMAAQBOAABBAoQA/AlAoBKQAmBHADBqQgDBmgmBIQgoBKg/AmQhBAmhOAAQhMAAhBgmgAkhhLQgqAfgYA3QgYA4AABLQAABJAYA4QAYA3AqAgQAqAeA3AAQA4AAArgeQArggAZg3QAXg4AAhJQAAhLgXg4QgZg3grgfQgrgfg4gBQg3ABgqAfgAEIHDIAApsIBMAAIAJByIAEAAQAfg8AugkQAughA1gCQATAAAPADQAQACAPAJIgTBSQgPgFgMgDQgOgCgQAAQgqgCgrAjQgqAhgjBQIAAGVgAteHDIiHoMIgUhgIgUhfIgHAAIgVBfQgLAvgKAxIiEIMIhuAAIi3tJIBhAAIBeHUQAbCHAYCJIAGAAQANhGAQhDIAfiHIB4nUIBZAAIB4HUIAgCHIAeCJIAHAAIAZiJQAKhFAOhCIBcnUIBcAAIiyNJg");
-	this.shape.setTransform(553.1,684.6);
+	this.shape.graphics.f("#333333").s().p("AQUF9QhEhTgBidQABhlAlhJQAlhJA9goQA+goBJAAQA2ABApASQApAVApAhIgDlgIBcAAIAAOVIhMAAIgKhKIgDAAQgkAmgyAZQgwAYg6ACQh2gChFhUgASNhLQgrAggYA3QgZA3AABJQAAB1AvBAQAsBCBXAAQAtAAApgWQApgWAqgsIAAlRQgrglgngPQglgQgoAAQg2gBgqAggALUGyQgYgiAAg+IAAsiIBeAAIAAMoQAAAYAIAKQAIAKANAAIAJAAIAMgBIAOBIQgLAEgMABQgNADgUAAQg1gCgZgfgAlNGsQhBgmgnhJQgnhJgBhnQABhoAnhIQAnhKBBgmQBBgnBNAAQBNAABBAnQA/AmAoBKQAnBIACBoQgCBngnBJQgoBJg/AmQhBAlhNACQhNgChBglgAkhhLQgrAfgXA3QgYA4AABKQAABKAYA5QAXA3ArAfQArAeA3AAQA3AAArgeQAqgfAZg3QAYg5AAhKQAAhKgYg4QgZg3gqgfQgrggg3ABQg3gBgrAggAEIHEIAAptIBMAAIAJByIADAAQAgg9AugiQAtgiA2gCQATABAPACQAQACAPAKIgTBRQgOgFgNgCQgOgDgQAAQgqgBgrAhQgrAighBRIAAGVgAteHEIiHoMIgUhhIgUhfIgHAAIgUBfQgMAwgKAxIiEIMIhuAAIi3tLIBhAAIBeHUQAaCHAZCLIAGAAQAOhHAPhEIAeiHIB5nUIBZAAIB4HUIAgCHIAeCLIAHAAIAYiLQALhEAOhDIBbnUIBdAAIixNLg");
+	this.shape.setTransform(569.1,284.6);
 
 	this.shape_1 = new cjs.Shape();
-	this.shape_1.graphics.f("#333333").s().p("ANBGyQgXgjAAg+IAAsiIBdAAIAAMpQAAAXAIAKQAIAKANAAIAJAAIANgCIANBJQgLAEgMABQgNADgUAAQg0gBgagfgAIAGyQgZgjABg+IAAsiIBeAAIAAMpQAAAXAHAKQAJAKANAAIAJAAIAMgCIAOBJQgMAEgMABQgNADgUAAQg0gBgZgfgAguGrQhDgngmhIQgohJAAhnQAAhlAohIQAmhLA/goQA/gmBJAAQB0ABBABMQBABNgBCIIAAAfIgDAZImoAAQADBGAaA0QAcAzAuAdQAvAcA/AAQAsAAAogNQAmgNAjgYIAiA+QgoAbgxASQgyARhBACQhRgChDglgAD4BcQgBhjgpg0Qgqg0hOAAQgvAAgnAZQgnAXgbAuQgaAtgIBAIFcAAIAAAAgAnQHDIAAmTImXAAIAAGTIhgAAIAAtKIBgAAIAAFkIGXAAIAAlkIBfAAIAANKg");
-	this.shape_1.setTransform(201.5,684.6);
+	this.shape_1.graphics.f("#333333").s().p("ANBGxQgYghABg/IAAsiIBdAAIAAMoQABAYAHAKQAIAKANAAIAJAAIANgBIANBIQgLAEgNABQgMADgUAAQg1gBgZgggAIAGxQgZghACg/IAAsiIBdAAIAAMoQAAAYAHAKQAKAKAMAAIAJAAIANgBIANBIQgMAEgMABQgOADgTAAQg0gBgZgggAguGrQhCgmgnhKQgohIAAhmQAAhmAohJQAnhJA+goQA/gnBJAAQB0ABBABNQA/BMAACIIAAAeIgDAbImoAAQADBEAbA1QAbAzAuAdQAvAdA+AAQAuAAAogOQAlgMAjgYIAiA9QgoAbgxASQgyAShBABQhRgChDglgAD4BbQgBhigqg1QgqgzhNAAQgvAAgnAZQgnAYgbAsQgbAugHA/IFcAAIAAAAgAnQHCIAAmSImWAAIAAGSIhhAAIAAtJIBhAAIAAFkIGWAAIAAlkIBeAAIAANJg");
+	this.shape_1.setTransform(217.5,284.6);
 
 	this.omc = new lib.omc();
 	this.omc.name = "omc";
 	this.omc.parent = this;
-	this.omc.setTransform(338.5,685.3,1.371,1.371,0,0,0,27.6,60);
+	this.omc.setTransform(354.5,285.3,1.371,1.371,0,0,0,27.6,60);
 
 	this.instance_1 = new lib.元件3();
 	this.instance_1.parent = this;
-	this.instance_1.setTransform(404.5,684.4,1.371,1.371,0,0,0,218.8,34.1);
+	this.instance_1.setTransform(420.5,284.4,1.371,1.371,0,0,0,218.8,34.1);
 	this.instance_1._off = true;
 
 	this.timeline.addTween(cjs.Tween.get({}).to({state:[{t:this.omc},{t:this.shape_1},{t:this.shape}]}).to({state:[{t:this.instance_1}]},1).to({state:[{t:this.instance_1}]},47).to({state:[]},1).wait(11));
@@ -421,7 +421,7 @@ p.nominalBounds = null;
 	this.hintmc = new lib.元件6();
 	this.hintmc.name = "hintmc";
 	this.hintmc.parent = this;
-	this.hintmc.setTransform(288.5,748.2,0.929,0.929,0,0,0,0.1,0.1);
+	this.hintmc.setTransform(304.5,348.2,0.929,0.929,0,0,0,0.1,0.1);
 
 	this.timeline.addTween(cjs.Tween.get(this.hintmc).to({_off:true},1).wait(59));
 
@@ -438,11 +438,11 @@ p.nominalBounds = null;
 	this.cr = new lib.元件2();
 	this.cr.name = "cr";
 	this.cr.parent = this;
-	this.cr.setTransform(-92.5,1048.5,2.4,2.4,0,0,0,15.1,15.1);
+	this.cr.setTransform(-76.5,648.5,2.4,2.4,0,0,0,15.1,15.1);
 	this.cr.alpha = 0;
 	this.cr._off = true;
 
-	this.timeline.addTween(cjs.Tween.get(this.cr).wait(1).to({_off:false},0).to({y:438.4,alpha:1},58,cjs.Ease.quartInOut).wait(1));
+	this.timeline.addTween(cjs.Tween.get(this.cr).wait(1).to({_off:false},0).to({y:38.4,alpha:1},58,cjs.Ease.quartInOut).wait(1));
 
 	// 图层_3 复制
 	this.instance_3 = new lib.元件4();
@@ -454,17 +454,17 @@ p.nominalBounds = null;
 	this.timeline.addTween(cjs.Tween.get(this.instance_3).wait(1).to({_off:false},0).to({alpha:1},58).wait(1));
 
 }).prototype = p = new cjs.MovieClip();
-p.nominalBounds = new cjs.Rectangle(504.7,1313,599.6,163.9);
+p.nominalBounds = new cjs.Rectangle(520.7,503,599.6,163.9);
 // library properties:
 lib.properties = {
 	id: 'ABC9314A67537640B3EEC9351A66BE13',
 	width: 800,
-	height: 1420,
+	height: 600,
 	fps: 60,
 	color: "#FFFFFF",
 	opacity: 1.00,
 	manifest: [
-		{src:"images/HelloWorld_atlas_.png?1569689038541", id:"HelloWorld_atlas_"}
+		{src:"images/HelloWorld_atlas_.png?1569689520072", id:"HelloWorld_atlas_"}
 	],
 	preloads: []
 };

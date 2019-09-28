@@ -3,7 +3,7 @@
 var p; // shortcut to reference prototypes
 var lib={};var ss={};var img={};
 lib.ssMetadata = [
-		{name:"HelloWorld_atlas_", frames: [[0,0,444,250],[446,0,444,250],[0,252,444,250],[446,252,444,250],[0,504,444,250],[0,756,444,250],[446,504,444,250],[446,756,444,250]]}
+		{name:"HelloWorld_atlas_", frames: [[446,252,444,250],[0,0,444,250],[446,0,444,250],[0,252,444,250],[446,504,444,250],[446,756,444,250],[0,504,444,250],[0,756,444,250]]}
 ];
 
 
@@ -276,21 +276,21 @@ p.nominalBounds = new cjs.Rectangle(0,0,444,250);
 	this.initialize(mode,startPosition,loop,{});
 
 	// timeline functions:
-	this.frame_99 = function() {
+	this.frame_56 = function() {
 		this.stop();
 	}
 
 	// actions tween:
-	this.timeline.addTween(cjs.Tween.get(this).wait(99).call(this.frame_99).wait(1));
+	this.timeline.addTween(cjs.Tween.get(this).wait(56).call(this.frame_56).wait(1));
 
 	// 图层_1
 	this.instance = new lib.hintmc();
 	this.instance.parent = this;
-	this.instance.setTransform(98.4,31.1,1,1,0,0,0,98.4,31.1);
+	this.instance.setTransform(54.5,41.2,2.097,2.097,0,0,0,98.4,31.1);
 	this.instance.alpha = 0;
 	this.instance._off = true;
 
-	this.timeline.addTween(cjs.Tween.get(this.instance).wait(59).to({_off:false},0).to({alpha:1},40).wait(1));
+	this.timeline.addTween(cjs.Tween.get(this.instance).wait(16).to({_off:false},0).to({alpha:1},40).wait(1));
 
 }).prototype = p = new cjs.MovieClip();
 p.nominalBounds = null;
@@ -389,7 +389,7 @@ p.nominalBounds = null;
 	// 图层_4
 	this.instance = new lib.元件5();
 	this.instance.parent = this;
-	this.instance.setTransform(400.3,282.8,0.548,0.548,0,0,0,218.7,34);
+	this.instance.setTransform(404.5,684.4,1.371,1.371,0,0,0,218.8,34.1);
 	this.instance.alpha = 0;
 	this.instance._off = true;
 
@@ -397,63 +397,74 @@ p.nominalBounds = null;
 
 	// 图层_1
 	this.shape = new cjs.Shape();
-	this.shape.graphics.f("#333333").s().p("AGiCYQgcghAAg/QAAgoAPgcQAPgeAYgPQAZgRAdABQAWAAAQAHQARAIAQANIgCiNIAlAAIAAFuIgeAAIgEgdIgBAAQgPAPgTAKQgUAKgXABQgvgBgbgigAHSgdQgSANgJAVQgKAWAAAdQAAAvATAZQARAaAjAAQASAAARgIQAQgJAQgSIAAiGQgRgOgPgHQgPgGgQAAQgWAAgQANgAEhCtQgJgNAAgZIAAlAIAmAAIAAFCQAAAKADAEQADAEAFAAIADAAIAGgBIAFAeIgKACIgMABQgWgBgKgNgAiFCrQgZgPgQgeQgPgdgBgpQABgqAPgbQAQgeAZgPQAagPAfAAQAfAAAaAPQAYAPARAeQAPAbABAqQgBApgPAdQgRAegYAPQgaAPgfABQgfgBgagPgAhzgdQgRAMgKAWQgJAVAAAeQAAAeAJAWQAKAXARAMQARAMAWAAQAXAAAQgMQARgMAKgXQAKgWAAgeQAAgegKgVQgKgWgRgMQgQgNgXAAQgWAAgRANgABqC0IAAj3IAeAAIAEAuIABAAQAMgZATgOQASgNAWAAIANAAQAGACAHADIgIAgIgLgCIgMgBQgQgBgSANQgRAOgOAfIAACigAlYC0Ig2jQIgIgnIgIgmIgCAAIgJAmIgIAnIg2DQIgsAAIhJlPIAnAAIAmC6IAVBtIABAAIAMg3IANg2IAvi6IAkAAIAwC6IANA2IAMA3IACAAIALg3IAKg2IAki6IAlAAIhHFPg");
-	this.shape.setTransform(459.7,282.8);
+	this.shape.graphics.f("#333333").s().p("AQVF+QhGhVAAibQABhmAlhJQAlhJA9gnQA+gpBJAAQA1AAAqAUQApAUAqAhIgFlhIBdAAIAAOVIhMAAIgKhJIgCAAQglAlgyAZQgxAag5AAQh2AAhEhUgASNhLQgrAggYA4QgZA3AABIQAAB1AvBBQAtBBBWgBQAtAAApgUQAqgXAogsIAAlQQgqgmgngPQglgRgoAAQg2ABgqAfgALUGyQgXgigBg+IAAsiIBeAAIAAMoQAAAYAIAKQAIAKANAAIAJAAIAMgCIAOBJQgLAEgNABQgMACgUAAQg1gBgZgfgAlNGsQhBgmgnhKQgnhIgBhmQABhqAnhHQAnhKBBglQBBgoBMAAQBOAABBAoQA/AlAoBKQAmBHADBqQgDBmgmBIQgoBKg/AmQhBAmhOAAQhMAAhBgmgAkhhLQgqAfgYA3QgYA4AABLQAABJAYA4QAYA3AqAgQAqAeA3AAQA4AAArgeQArggAZg3QAXg4AAhJQAAhLgXg4QgZg3grgfQgrgfg4gBQg3ABgqAfgAEIHDIAApsIBMAAIAJByIAEAAQAfg8AugkQAughA1gCQATAAAPADQAQACAPAJIgTBSQgPgFgMgDQgOgCgQAAQgqgCgrAjQgqAhgjBQIAAGVgAteHDIiHoMIgUhgIgUhfIgHAAIgVBfQgLAvgKAxIiEIMIhuAAIi3tJIBhAAIBeHUQAbCHAYCJIAGAAQANhGAQhDIAfiHIB4nUIBZAAIB4HUIAgCHIAeCJIAHAAIAZiJQAKhFAOhCIBcnUIBcAAIiyNJg");
+	this.shape.setTransform(553.1,684.6);
 
 	this.shape_1 = new cjs.Shape();
-	this.shape_1.graphics.f("#333333").s().p("AFNCtQgJgNAAgZIAAlAIAlAAIAAFCQAAAKADAEQAEAEAFAAIADAAIAFgBIAGAdIgKACIgNABQgVAAgKgNgADNCtQgKgNAAgZIAAlAIAmAAIAAFCQAAAKADAEQADAEAFAAIAEAAIAFgBIAFAdIgJACIgNABQgVAAgKgNgAgSCrQgagQgQgdQgQgdAAgpQAAgoAQgdQAQgdAZgQQAYgQAdAAQAvABAZAeQAaAfAAA2IAAAMIgCAKIipAAQACAcAKAVQALAUASAMQATALAZAAQASAAAQgFQAPgFAOgKIANAZQgQALgTAHQgUAHgaAAQghAAgagPgABjAlQAAgngRgVQgRgVgfAAQgSAAgQAKQgPAKgLASQgKARgDAaICKAAIAAAAgAi5C0IAAihIiiAAIAAChIgnAAIAAlQIAnAAIAACPICiAAIAAiPIAmAAIAAFQg");
-	this.shape_1.setTransform(319.2,282.8);
+	this.shape_1.graphics.f("#333333").s().p("ANBGyQgXgjAAg+IAAsiIBdAAIAAMpQAAAXAIAKQAIAKANAAIAJAAIANgCIANBJQgLAEgMABQgNADgUAAQg0gBgagfgAIAGyQgZgjABg+IAAsiIBeAAIAAMpQAAAXAHAKQAJAKANAAIAJAAIAMgCIAOBJQgMAEgMABQgNADgUAAQg0gBgZgfgAguGrQhDgngmhIQgohJAAhnQAAhlAohIQAmhLA/goQA/gmBJAAQB0ABBABMQBABNgBCIIAAAfIgDAZImoAAQADBGAaA0QAcAzAuAdQAvAcA/AAQAsAAAogNQAmgNAjgYIAiA+QgoAbgxASQgyARhBACQhRgChDglgAD4BcQgBhjgpg0Qgqg0hOAAQgvAAgnAZQgnAXgbAuQgaAtgIBAIFcAAIAAAAgAnQHDIAAmTImXAAIAAGTIhgAAIAAtKIBgAAIAAFkIGXAAIAAlkIBfAAIAANKg");
+	this.shape_1.setTransform(201.5,684.6);
 
 	this.omc = new lib.omc();
 	this.omc.name = "omc";
 	this.omc.parent = this;
-	this.omc.setTransform(373.9,283.1,0.548,0.548,0,0,0,27.4,59.9);
+	this.omc.setTransform(338.5,685.3,1.371,1.371,0,0,0,27.6,60);
 
 	this.instance_1 = new lib.元件3();
 	this.instance_1.parent = this;
-	this.instance_1.setTransform(400.3,282.8,0.548,0.548,0,0,0,218.7,34);
+	this.instance_1.setTransform(404.5,684.4,1.371,1.371,0,0,0,218.8,34.1);
 	this.instance_1._off = true;
 
 	this.timeline.addTween(cjs.Tween.get({}).to({state:[{t:this.omc},{t:this.shape_1},{t:this.shape}]}).to({state:[{t:this.instance_1}]},1).to({state:[{t:this.instance_1}]},47).to({state:[]},1).wait(11));
 	this.timeline.addTween(cjs.Tween.get(this.instance_1).wait(1).to({_off:false},0).to({alpha:0},47).to({_off:true},1).wait(11));
 
-	// 图层_3
+	// 图层_6
 	this.hintmc = new lib.元件6();
 	this.hintmc.name = "hintmc";
 	this.hintmc.parent = this;
-	this.hintmc.setTransform(373.9,341.9,1,1,0,0,0,98.4,31.1);
+	this.hintmc.setTransform(288.5,748.2,0.929,0.929,0,0,0,0.1,0.1);
 
+	this.timeline.addTween(cjs.Tween.get(this.hintmc).to({_off:true},1).wait(59));
+
+	// 图层_3
 	this.instance_2 = new lib.元件4();
 	this.instance_2.parent = this;
-	this.instance_2.setTransform(400,300.1,0.657,0.696,0,0,0,609.1,431.2);
+	this.instance_2.setTransform(404,668.1,0.734,1.93,0,0,0,609.1,431.1);
 	this.instance_2.alpha = 0;
 	this.instance_2._off = true;
 
-	this.timeline.addTween(cjs.Tween.get({}).to({state:[{t:this.hintmc}]}).to({state:[{t:this.instance_2}]},1).to({state:[{t:this.instance_2}]},58).wait(1));
 	this.timeline.addTween(cjs.Tween.get(this.instance_2).wait(1).to({_off:false},0).to({alpha:0.641},58).wait(1));
 
 	// 图层_2
 	this.cr = new lib.元件2();
 	this.cr.name = "cr";
 	this.cr.parent = this;
-	this.cr.setTransform(-96.5,646.4,2.4,2.4,0,0,0,15.1,15.1);
+	this.cr.setTransform(-92.5,1048.5,2.4,2.4,0,0,0,15.1,15.1);
 	this.cr.alpha = 0;
 	this.cr._off = true;
 
-	this.timeline.addTween(cjs.Tween.get(this.cr).wait(1).to({_off:false},0).to({y:36.3,alpha:1},58,cjs.Ease.quartInOut).wait(1));
+	this.timeline.addTween(cjs.Tween.get(this.cr).wait(1).to({_off:false},0).to({y:438.4,alpha:1},58,cjs.Ease.quartInOut).wait(1));
+
+	// 图层_3 复制
+	this.instance_3 = new lib.元件4();
+	this.instance_3.parent = this;
+	this.instance_3.setTransform(404,668.1,0.734,1.93,0,0,0,609.1,431.1);
+	this.instance_3.alpha = 0;
+	this.instance_3._off = true;
+
+	this.timeline.addTween(cjs.Tween.get(this.instance_3).wait(1).to({_off:false},0).to({alpha:1},58).wait(1));
 
 }).prototype = p = new cjs.MovieClip();
-p.nominalBounds = new cjs.Rectangle(680.5,550.3,239.7,65.5);
+p.nominalBounds = new cjs.Rectangle(504.7,1313,599.6,163.9);
 // library properties:
 lib.properties = {
 	id: 'ABC9314A67537640B3EEC9351A66BE13',
 	width: 800,
-	height: 600,
+	height: 1420,
 	fps: 60,
 	color: "#FFFFFF",
 	opacity: 1.00,
 	manifest: [
-		{src:"images/HelloWorld_atlas_.png?1569688134502", id:"HelloWorld_atlas_"}
+		{src:"images/HelloWorld_atlas_.png?1569689038541", id:"HelloWorld_atlas_"}
 	],
 	preloads: []
 };

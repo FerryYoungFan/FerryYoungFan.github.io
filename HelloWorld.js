@@ -3,7 +3,7 @@
 var p; // shortcut to reference prototypes
 var lib={};var ss={};var img={};
 lib.ssMetadata = [
-		{name:"HelloWorld_atlas_", frames: [[0,504,444,250],[0,0,444,250],[446,0,444,250],[0,756,444,250],[0,252,444,250],[446,252,444,250],[446,504,444,250],[446,756,444,250]]}
+		{name:"HelloWorld_atlas_", frames: [[0,0,444,250],[446,0,444,250],[0,252,444,250],[446,252,444,250],[0,504,444,250],[0,756,444,250],[446,504,444,250],[446,756,444,250]]}
 ];
 
 
@@ -464,7 +464,7 @@ lib.properties = {
 	color: "#FFFFFF",
 	opacity: 1.00,
 	manifest: [
-		{src:"images/HelloWorld_atlas_.png?1569689520072", id:"HelloWorld_atlas_"}
+		{src:"images/HelloWorld_atlas_.png?1569689694158", id:"HelloWorld_atlas_"}
 	],
 	preloads: []
 };

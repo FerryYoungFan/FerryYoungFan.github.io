@@ -10,23 +10,19 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="height=device-height, initial-scale=1.0">
 <meta name="authoring-tool" content="Adobe_Animate_CC">
 <title>HelloWorld</title>
 <!-- write your code here -->
 <style>
-  body {
-	overflow:hidden;
-  }
   #animation_container {
 	position:absolute;
 	margin:auto;
-	left:-100%;right:-100%;
-	top:-100%;bottom:-100%;
+	left:0;right:0;
+	top:0;bottom:0;
   }
 </style>
 <script src="https://code.createjs.com/createjs-2015.11.26.min.js"></script>
-<script src="HelloWorld.js?1568120400511"></script>
+<script src="HelloWorld.js?1569688134528"></script>
 <script>
 var canvas, stage, exportRoot, anim_container, dom_overlay_container, fnStartAnimation;
 function init() {
@@ -98,7 +94,7 @@ function handleComplete(evt,comp) {
 			stage.tickOnUpdate = true;		
 		}
 	}
-	makeResponsive(true,'both',true,2);	
+	makeResponsive(true,'width',true,1);	
 	AdobeAn.compositionLoaded(lib.properties.id);
 	fnStartAnimation();
 }

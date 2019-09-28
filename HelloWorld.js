@@ -3,7 +3,7 @@
 var p; // shortcut to reference prototypes
 var lib={};var ss={};var img={};
 lib.ssMetadata = [
-		{name:"HelloWorld_atlas_", frames: [[446,252,444,250],[0,252,444,250],[0,504,444,250],[0,756,444,250],[446,504,444,250],[446,756,444,250],[0,0,444,250],[446,0,444,250]]}
+		{name:"HelloWorld_atlas_", frames: [[0,0,444,250],[446,0,444,250],[0,252,444,250],[446,252,444,250],[0,504,444,250],[0,756,444,250],[446,504,444,250],[446,756,444,250]]}
 ];
 
 
@@ -303,6 +303,8 @@ p.nominalBounds = null;
 	// timeline functions:
 	this.frame_0 = function() {
 		createjs.Touch.enable(stage);
+		document.body.style.backgroundColor = "#FFFFFF";
+		
 		this.stop();
 		this.omc.addEventListener("mousedown", onMouseDown.bind(this));
 		this.omc.addEventListener("tick", onMouseMove.bind(this));
@@ -311,10 +313,12 @@ p.nominalBounds = null;
 		this.omc.inity = this.omc.y;
 		var hideHint = false;
 		var maxDist = 150;
+		root = this;
+		
 		function onMouseDown(evt) {
 			var item = this.omc;
-			if(!hideHint){
-				this.hintmc.addEventListener("tick", enterFrameFunc.bind(this));
+			if (!hideHint) {
+				this.hintmc.addEventListener("tick", enterFrameFunc);
 				hideHint = true;
 				this.hintmc.alpha = 1;
 			}
@@ -338,10 +342,8 @@ p.nominalBounds = null;
 				item.alpha = (maxDist - dist) / maxDist;
 				if (item.alpha <= 0) {
 					item.drag = false;
-					this.omc.removeEventListener("mousedown", onMouseDown.bind(this));
-					this.omc.removeEventListener("tick", onMouseMove.bind(this));
-					this.omc.removeEventListener("pressup", onMouseUp.bind(this));
-					stage.play();
+					this.play();
+					this.addEventListener("tick", toBlack);
 				}
 		
 			}
@@ -358,10 +360,22 @@ p.nominalBounds = null;
 			return Math.sqrt((ax - bx) * (ax - bx) + (ay - by) * (ay - by));
 		}
 		
-		function enterFrameFunc(){
-			this.hintmc.alpha -= 0.04;
-			if(this.hintmc.alpha <= 0){
-				this.hintmc.removeEventListener("tick", enterFrameFunc.bind(this));
+		function enterFrameFunc() {
+			root.hintmc.alpha -= 0.04;
+			if (root.hintmc.alpha <= 0) {
+				root.hintmc.removeEventListener("tick", enterFrameFunc);
+			}
+		}
+		
+		function toBlack() {
+			if (root.cr) {
+				var temp = Math.round(255 - root.cr.alpha * 255);
+				var str = temp >= 16 ? "" + temp.toString(16) : "0" + temp.toString(16);
+				//console.log(str)
+				document.body.style.backgroundColor = "#" + str + str + str;
+				if (temp <= 0) {
+					root.removeEventListener("tick", toBlack);
+				}
 			}
 		}
 	}
@@ -419,13 +433,14 @@ p.nominalBounds = null;
 	this.timeline.addTween(cjs.Tween.get(this.instance_2).wait(1).to({_off:false},0).to({alpha:0.641},58).wait(1));
 
 	// 图层_2
-	this.instance_3 = new lib.元件2();
-	this.instance_3.parent = this;
-	this.instance_3.setTransform(-96.5,646.4,2.4,2.4,0,0,0,15.1,15.1);
-	this.instance_3.alpha = 0;
-	this.instance_3._off = true;
+	this.cr = new lib.元件2();
+	this.cr.name = "cr";
+	this.cr.parent = this;
+	this.cr.setTransform(-96.5,646.4,2.4,2.4,0,0,0,15.1,15.1);
+	this.cr.alpha = 0;
+	this.cr._off = true;
 
-	this.timeline.addTween(cjs.Tween.get(this.instance_3).wait(1).to({_off:false},0).to({y:36.3,alpha:1},58,cjs.Ease.quartInOut).wait(1));
+	this.timeline.addTween(cjs.Tween.get(this.cr).wait(1).to({_off:false},0).to({y:36.3,alpha:1},58,cjs.Ease.quartInOut).wait(1));
 
 }).prototype = p = new cjs.MovieClip();
 p.nominalBounds = new cjs.Rectangle(680.5,550.3,239.7,65.5);
@@ -438,7 +453,7 @@ lib.properties = {
 	color: "#FFFFFF",
 	opacity: 1.00,
 	manifest: [
-		{src:"images/HelloWorld_atlas_.png?1568120400486", id:"HelloWorld_atlas_"}
+		{src:"images/HelloWorld_atlas_.png?1569688134502", id:"HelloWorld_atlas_"}
 	],
 	preloads: []
 };

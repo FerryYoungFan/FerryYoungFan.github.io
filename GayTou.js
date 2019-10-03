@@ -516,6 +516,21 @@ p.nominalBounds = new cjs.Rectangle(-55.9,-81.3,129.8,125.4);
 }).prototype = getMCSymbolPrototype(lib.ClipCanvas, null, null);
 
 
+(lib.元件21 = function(mode,startPosition,loop) {
+	this.initialize(mode,startPosition,loop,{});
+
+	// 图层_1
+	this.shape = new cjs.Shape();
+	this.shape.graphics.f("#CCFFFF").s().p("AqTKUIAA0nIUnAAIAAUng");
+	this.shape.setTransform(66,66);
+	this.shape._off = true;
+
+	this.timeline.addTween(cjs.Tween.get(this.shape).wait(3).to({_off:false},0).wait(1));
+
+}).prototype = p = new cjs.MovieClip();
+p.nominalBounds = null;
+
+
 (lib.元件19 = function(mode,startPosition,loop) {
 	this.initialize(mode,startPosition,loop,{});
 
@@ -1398,7 +1413,7 @@ p.nominalBounds = new cjs.Rectangle(-46.6,-92.4,114.2,174.2);
 		document.bgColor="##006600";
 		this.stop();
 		root = this;
-		this.stage.addEventListener("mousedown",()=>{
+		this.mainbtn.addEventListener("mousedown",()=>{
 			root.gotoAndStop(1);
 		});
 	}
@@ -1441,14 +1456,8 @@ p.nominalBounds = new cjs.Rectangle(-46.6,-92.4,114.2,174.2);
 		this.cannon.xmin = 81;
 		this.cannon.xmax = 643.15;
 		
-		var genPoopGap = 60*5;
+		var genPoopGap = 60 * 5;
 		var genPoopCount = 0;
-		
-		this.stage.on("stagemousemove", function (event) {
-			var p = this.globalToLocal(stage.mouseX, stage.mouseY);
-			root.xmouse = p.x;
-			root.ymouse = p.y;
-		}, this);
 		
 		
 		this.turtle.addEventListener("mousedown", mouseDownFunc);
@@ -1468,6 +1477,10 @@ p.nominalBounds = new cjs.Rectangle(-46.6,-92.4,114.2,174.2);
 		
 		this.stage.addEventListener("tick", enterFrameFunc);
 		function enterFrameFunc() {
+			var p = stage.globalToLocal(stage.mouseX, stage.mouseY);
+			root.xmouse = p.x;
+			root.ymouse = p.y;
+		
 			var tx = root.turtle.x;
 			var ty = root.turtle.y;
 			moveObj(root.cannon);
@@ -1485,9 +1498,9 @@ p.nominalBounds = new cjs.Rectangle(-46.6,-92.4,114.2,174.2);
 			if (root.juhua.currentFrame == 22) {
 				createPoop();
 			}
-			
-			genPoopCount --;
-			if (genPoopCount <= 0){
+		
+			genPoopCount--;
+			if (genPoopCount <= 0) {
 				genPoopCount = genPoopGap;
 				root.juhua.play();
 			}
@@ -1630,13 +1643,18 @@ p.nominalBounds = new cjs.Rectangle(-46.6,-92.4,114.2,174.2);
 	this.timeline.addTween(cjs.Tween.get(this).call(this.frame_0).wait(1).call(this.frame_1).wait(1));
 
 	// 图层_5
+	this.mainbtn = new lib.元件21();
+	this.mainbtn.name = "mainbtn";
+	this.mainbtn.parent = this;
+	this.mainbtn.setTransform(359.9,639.8,5.452,9.693,0,0,0,66,66);
+	new cjs.ButtonHelper(this.mainbtn, 0, 1, 2, false, new lib.元件21(), 3);
+
 	this.turtle = new lib.turtle();
 	this.turtle.name = "turtle";
 	this.turtle.parent = this;
 	this.turtle.setTransform(354.9,683,0.773,0.773);
-	this.turtle._off = true;
 
-	this.timeline.addTween(cjs.Tween.get(this.turtle).wait(1).to({_off:false},0).wait(1));
+	this.timeline.addTween(cjs.Tween.get({}).to({state:[{t:this.mainbtn}]}).to({state:[{t:this.turtle}]},1).wait(1));
 
 	// 图层_1
 	this.shape = new cjs.Shape();
@@ -2134,7 +2152,7 @@ p.nominalBounds = new cjs.Rectangle(-46.6,-92.4,114.2,174.2);
 	this.timeline.addTween(cjs.Tween.get({}).to({state:[{t:this.instance_3},{t:this.instance_2}]}).to({state:[{t:this.backGround},{t:this.instance_4}]},1).wait(1));
 
 }).prototype = p = new cjs.MovieClip();
-p.nominalBounds = new cjs.Rectangle(396.9,694.6,632.2,1152.6);
+p.nominalBounds = new cjs.Rectangle(360,640,720,1280);
 // library properties:
 lib.properties = {
 	id: 'DDD4472B53ABBC478FF3107C2E6B00AF',

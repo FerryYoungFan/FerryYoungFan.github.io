@@ -1411,6 +1411,7 @@ p.nominalBounds = new cjs.Rectangle(-46.6,-92.4,114.2,174.2);
 	// timeline functions:
 	this.frame_0 = function() {
 		document.bgColor="##006600";
+		createjs.Touch.enable(stage);
 		this.stop();
 		root = this;
 		this.mainbtn.addEventListener("mousedown",()=>{
@@ -1419,7 +1420,7 @@ p.nominalBounds = new cjs.Rectangle(-46.6,-92.4,114.2,174.2);
 	}
 	this.frame_1 = function() {
 		//Gaytou by FanKetchup
-		
+		createjs.Touch.enable(stage);
 		
 		this.stop();
 		var root = this;

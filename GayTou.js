@@ -1476,7 +1476,7 @@ p.nominalBounds = new cjs.Rectangle(-46.6,-92.4,114.2,174.2);
 			root.dragging = false;
 		}
 		
-		this.stage.addEventListener("tick", enterFrameFunc);
+		this.turtle.addEventListener("tick", enterFrameFunc);
 		function enterFrameFunc() {
 			var p = stage.globalToLocal(stage.mouseX, stage.mouseY);
 			root.xmouse = p.x;

@@ -14,7 +14,7 @@
 <title>GayTou</title>
 <!-- write your code here -->
 <style>
-  #animation_container, #_preload_div_ {
+  #animation_container {
 	position:absolute;
 	margin:auto;
 	left:0;right:0;
@@ -22,7 +22,7 @@
   }
 </style>
 <script src="https://code.createjs.com/createjs-2015.11.26.min.js"></script>
-<script src="GayTou.js?1570185757512"></script>
+<script src="GayTou.js?1570262682637"></script>
 <script>
 // Global Scripts
 	var score = 0;
@@ -42,9 +42,6 @@ function handleComplete(evt,comp) {
 	//This function is always called, irrespective of the content. You can use the variable "stage" after it is created in token create_stage.
 	var lib=comp.getLibrary();
 	var ss=comp.getSpriteSheet();
-	var preloaderDiv = document.getElementById("_preload_div_");
-	preloaderDiv.style.display = 'none';
-	canvas.style.display = 'block';
 	exportRoot = new lib.GayTou();
 	stage = new lib.Stage(canvas);
 	stage.enableMouseOver();	
@@ -80,8 +77,8 @@ function handleComplete(evt,comp) {
 			}			
 			canvas.width = w*pRatio*sRatio;			
 			canvas.height = h*pRatio*sRatio;
-			canvas.style.width = anim_container.style.width = dom_overlay_container.style.width = preloaderDiv.style.width = w*sRatio+'px';				
-			canvas.style.height = anim_container.style.height = dom_overlay_container.style.height = preloaderDiv.style.height = h*sRatio+'px';
+			canvas.style.width = dom_overlay_container.style.width = anim_container.style.width =  w*sRatio+'px';				
+			canvas.style.height = anim_container.style.height = dom_overlay_container.style.height = h*sRatio+'px';
 			stage.scaleX = pRatio*sRatio;			
 			stage.scaleY = pRatio*sRatio;			
 			lastW = iw; lastH = ih; lastS = sRatio;            
@@ -99,10 +96,9 @@ function handleComplete(evt,comp) {
 </head>
 <body onload="init();" style="margin:0px;">
 	<div id="animation_container" style="background-color:rgba(204, 204, 204, 1.00); width:720px; height:1080px">
-		<canvas id="canvas" width="720" height="1080" style="position: absolute; display: none; background-color:rgba(204, 204, 204, 1.00);"></canvas>
-		<div id="dom_overlay_container" style="pointer-events:none; overflow:hidden; width:720px; height:1080px; position: absolute; left: 0px; top: 0px; display: none;">
+		<canvas id="canvas" width="720" height="1080" style="position: absolute; display: block; background-color:rgba(204, 204, 204, 1.00);"></canvas>
+		<div id="dom_overlay_container" style="pointer-events:none; overflow:hidden; width:720px; height:1080px; position: absolute; left: 0px; top: 0px; display: block;">
 		</div>
 	</div>
-    <div id='_preload_div_' style='position:absolute; top:0; left:0; display: inline-block; height:1080px; width: 720px; text-align: center;'>	<span style='display: inline-block; height: 100%; vertical-align: middle;'></span>	<img src=images/_preloader.gif?1570185757512 style='vertical-align: middle; max-height: 100%'/></div>
 </body>
 </html>

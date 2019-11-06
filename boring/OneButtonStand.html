@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>一键发情</title>
+    <style>
+        body{
+            background: rgb(245, 153, 207);
+        }
+        #myInfo{
+            position: absolute;
+            left: 50%;
+            bottom: -3%;
+            transform: translate(-50%, -50%);
+            color:rgb(165, 7, 99);
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+        }
+        #oneButtonStand{
+            width:350px;
+            height:350px;
+            background: rgb(216, 50, 147);
+            color:white;
+            font-size: 60px;
+            font-weight: 500;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+            outline: none;
+            border-radius: 50%;
+            border:4px solid rgb(165, 7, 99);
+            text-align: center;
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            cursor: pointer;
+        }
+        #oneButtonStand:hover{
+            background: rgb(221, 64, 156);
+            color:white;
+            border:4px solid rgb(197, 34, 129);
+        }
+        #oneButtonStand:active{
+            background: rgb(192, 42, 130);
+            color:yellow;
+            border:4px solid rgb(165, 7, 99);
+            line-height: 340px;
+        }
+    </style>
+    <script>
+        var textarr = ["情",
+        "情，已经给你发了",
+        "情，我都说了，已经给你发了",
+        "哈？觉得不过瘾？",
+        "情，不都给发给你看了吗？",
+        "什么嘛，点给没完",
+        "不要戳人家啦~",
+        "你很无聊诶，非要人家发情给你看嘛？",
+        "那好，做好准备咯！",
+        "情",
+        "懂了吧！这叫发情给你看！",
+        "什么？还觉得无聊？",
+        "哦，那你继续点呗",
+        "甚至可以算下这个Array的length",
+        "还点啊？",
+        "做点有意思的事不好么？",
+        "额……",
+        "什么？你说你没有事可做，就想赖在这不走？",
+        "唉，真拿你木办法",
+        "还点呐？",
+        "好吧那你继续点呗",
+        "点到最后也没惊喜的",
+        "真发情的话推荐去GitHub.com",
+        "上万Gay在线交流呢",
+        "P那个什么hub.com也行",
+        "快去呐，怎么还在点",
+        "不要乱点啦，人家害羞啦",
+        "刷刷帆帆的旧推文都比这个有意思啦",
+        "好吧你赖上我了",
+        "你要负责，屑屑",
+        "懒得敲那么多字了",
+        "那就提前祝你，春节快乐，身体健康吧",
+        "记得早晚八杯水，促进发情哦",
+        "就聊到这里吧，我先下了",
+        "要去洗澡",
+        "886",
+        "爱你哟",
+        "爱你哟，，，",
+        "，，，",
+        "拜拜"
+        ]
+        var pointer = 0;
+        function btnClick(){
+            if(pointer < textarr.length){
+                alert(textarr[pointer]);
+            }
+            pointer ++;
+            if(pointer == textarr.length){
+                window.close();
+            }
+        }
+    </script>
+</head>
+<body>
+    <div>
+        <button id="oneButtonStand" onclick="btnClick()">一键发情</button>
+    </div>
+    <div id="myInfo"><p>By 寂寞的帆帆</p></div>
+</body>
+</html>

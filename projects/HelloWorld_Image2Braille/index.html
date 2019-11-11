@@ -3,49 +3,58 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=0.5, maximum-scale=2.0, user-scalable=yes" /> 
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Image to Braille</title>
     <style>
         *{
+            margin:0;
+            border:0;
             font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
         }
         body{
             background-color: rgb(83, 160, 248);
+        }
+        body>div{
+            margin-bottom: 5px;
+            margin-left:auto;
+            margin-right:auto;
         }
         .hidden{
             display: none;
         }
         #appTitle{
             color: white;
-            margin: 10px auto;
             width:500px;
+            margin-top:5px;
         }
         #appTitle>h1{
             text-align: center;
         }
         #appTitle>p{
             text-align: right;
-            margin-top:-23px;
+            margin-top:0px;
             margin-right:90px;
         }
         #uploadDiv{
             width:500px;
             height:80px;
-            margin:5px auto;
             text-align: center;
             border:2px solid rgb(24, 90, 167);
             background-color: white;
         }
         #uploadDiv>input{
             width:400px;
-            outline: 1px dashed rgb(24, 90, 167);
+            outline: 2px dashed rgba(24, 90, 167, 0.2);
             padding:10px;
             cursor: pointer;
+            transition: 0.3s;
+        }
+        #uploadDiv>input:hover{
+            outline: 2px dashed rgb(24, 90, 167,1);
         }
         #inputDiv{
             width:500px;
-            margin:5px auto;
             text-align: center;
             border:2px solid rgb(24, 90, 167);
             background-color: white;
@@ -76,7 +85,8 @@
             line-height: 50px;
             display: inline-block;
             width:100px;
-            text-align:right;  
+            text-align:right;
+            color:rgb(24, 90, 167);
         }
         #input_middle{
             line-height: 50px;
@@ -96,6 +106,7 @@
             display: inline-block;
             width:70px;
             text-align:left;  
+            color:rgb(24, 90, 167);
         }
         #previewDiv{
             text-align:center;
@@ -119,7 +130,6 @@
             border-bottom: 2px solid rgb(24, 90, 167);
         }
         #outputDiv{
-            margin: 5px auto;
             text-align: center;
             width:500px;
             border:2px solid rgb(24, 90, 167);
@@ -128,7 +138,6 @@
         #introduction{
             width:500px;
             border:2px solid rgb(24, 90, 167);
-            margin:5px auto;
             background:white;
         }
         #introduction>h1,h2,h3,h4,h5,h6{
@@ -183,7 +192,38 @@
             font-weight: 500;
             color:rgb(24, 90, 167);
         }
-        
+        .newHr{
+            display: block;
+            border-top:2px dotted rgb(83, 160, 248);
+            width:90%;
+            margin-left: auto;
+            margin-right: auto;
+            margin-bottom: 10px;
+        }
+        .main_a{
+            color:rgb(24, 90, 167);
+            font-weight: 500;
+            transition: 0.3s;
+            text-decoration:none;
+        }
+        .main_a:hover{
+            color:rgb(83, 160, 248);
+        }
+        .main_a:active{
+            color:rgb(24, 90, 167);
+        }
+        .header_a{
+            color:white;
+            font-weight: 500;
+            transition: 0.3s;
+            text-decoration:none;
+        }
+        .header_a:hover{
+            color:yellow;
+        }
+        .header_a:active{
+            color:white;
+        }
     </style>
     <script>
         "use strict";
@@ -444,10 +484,10 @@
 <body>
     <div id="appTitle">
     <h1>图片转点阵文本生成器</h1>
-    <p>By FanKetchup</p>
+    <p>V1.1 By <a href="https://twitter.com/FanKetchup" title="FanKetchup" target="_blank" class="header_a">@FanKetchup</a></p>
     </div>
     <div id="uploadDiv">
-        <span class="info">请在此处上传图片。图片仅本地处理，不会上传。</span>
+        <span class="info">请在此处选择图片。图片仅本地处理，不会上传。</span>
         <input name="imagefile[]" type="file" id="takePictureField" accept="image/*" onchange="uploadPhotos(this)"/><br/>
         <div id="previewDiv">
                 <div id="tempCanvas"></div>
@@ -485,7 +525,7 @@
         <h2>欢迎使用帆帆的练手作品</h2>
         <h4>【请先从本地选取一张图片以生成点阵文本】</h4>
         <br/>
-        <hr/>
+        <div class="newHr"></div>
         <h3>生成效果示例</h3>
         <br/>
    <p id="demo">⠀⠀⠀⣀⣴⣦<br/>
@@ -497,11 +537,10 @@
                 ⠀⠀⣿⡇⠘⣿⠀⠀⠀⣿⡇⠀⠈⠻⣿<br/>
                 ⠀⠀⣿⡇⠀⠻⣷⣤⣾⠿⠀⠀⠀⠀⠙⣿⣦⡄</p>
         <br/>
-        <hr/>
-        <br/>
+        <div class="newHr"></div>
         <h3>原理说明</h3>
         <div id="state">
-            <p>此生成器会将输入的图像先压缩尺寸，然后根据阈值转换成二值图像。完成以上步骤后，程序会将二值图像映射成点阵文本。这里点阵文本使用了<a href="https://en.wikipedia.org/wiki/Braille_Patterns" title="转到维基百科">盲文图案</a>，Unicode码范围为10240~10495（十进制），跨度为256个字符。</p>
+            <p>此生成器会将输入的图像先压缩尺寸，然后根据阈值转换成二值图像。完成以上步骤后，程序会将二值图像映射成点阵文本。这里点阵文本使用了<a href="https://en.wikipedia.org/wiki/Braille_Patterns" title="转到维基百科" target="_blank" class="main_a">盲文图案</a>，Unicode码范围为10240~10495（十进制），跨度为256个字符。</p>
             <p>选择对应盲文字符的算法很简单，10240为空，10495为八个点全“点亮”（字符显示为“⣿”）。</p>
             <br/>
             <div id="statePic">
@@ -511,10 +550,10 @@
                 <div>64</div><div>128</div>
             </div>
             <br/>
-            <p>上图展示了8点盲文的计算方法（注意：给出的值都为16进制）。举个例子，如果你想输出“⢕”，那么只需要计算：</p>
+            <p>上图展示了8点盲文的计算方法（注意：图中给出的值都为十进制）。举个例子，如果你想输出“⢕”，那么只需要计算：</p>
             <span class="equation">10240 + 1 + 16 + 4 + 128 = 10389</span>
             <p>在 Javascript 中，用 <span>String.fromCharCode(10389)</span><br/>或者在 Python3 中， 用 <span>chr(10389)</span> 即可输出“⢕”。</p>
-            <p>你可以<a href="https://github.com/FerryYoungFan/FerryYoungFan.github.io/tree/master/projects/HelloWorld_Image2Braille">点击此处</a>转到帆帆的Repository查看JS和Python的源码。</p>
+            <p>你可以<a href="https://github.com/FerryYoungFan/FerryYoungFan.github.io/tree/master/projects/HelloWorld_Image2Braille" target="_blank" class="main_a">点击此处</a>转到帆帆的Repository查看JS和Python的源码。</p>
             <br/>
         </div> 
     </div>

@@ -11,7 +11,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="authoring-tool" content="Adobe_Animate_CC">
-<title>HowDirtyIsMe.html</title>
+<title>HowDirtyIsMe</title>
 <!-- write your code here -->
 <style>
   #animation_container {
@@ -22,7 +22,7 @@
   }
 </style>
 <script src="https://code.createjs.com/createjs-2015.11.26.min.js"></script>
-<script src="HowDirtyIsMe.html.js?1575709552319"></script>
+<script src="HowDirtyIsMe.js?1575785566606"></script>
 <script>
 // Global Scripts
 	var score = 0;
@@ -71,7 +71,7 @@ function handleComplete(evt,comp) {
 	for(i=0; i<ssMetadata.length; i++) {
 		ss[ssMetadata[i].name] = new createjs.SpriteSheet( {"images": [queue.getResult(ssMetadata[i].name)], "frames": ssMetadata[i].frames} )
 	}
-	exportRoot = new lib.HowDirtyIsMehtml();
+	exportRoot = new lib.HowDirtyIsMe();
 	stage = new lib.Stage(canvas);
 	stage.enableMouseOver();	
 	//Registers the "tick" event listener.

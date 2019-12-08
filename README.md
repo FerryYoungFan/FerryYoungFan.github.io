@@ -16,6 +16,9 @@ Have fun here : ) <br/><br/>
 ### Tests / 测试题：
 #### [How Dirty is Me（污力测试进阶版）](https://ferryyoungfan.github.io/tests/HowDirtyIsMe.html)
 快来测测自己有多污吧！这可是进阶的题目哦！
+<br/><br/>
+#### [How Dirty is Me 2（污力测试进阶版2）](https://ferryyoungfan.github.io/tests/HowDirtyIsMe2.html)
+升级到20题的污力测试
 <br/><br/><br/>
 ### Boring / 无聊内容：
 #### [Hell"o" World! （第一个createJS网页）](https://ferryyoungfan.github.io/boring/HelloWorld.html)

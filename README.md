@@ -6,7 +6,7 @@ Have fun here : ) <br/><br/>
 ## Go visit / 请访问: [FerryYoungFan.github.io](http://FerryYoungFan.github.io/)
 ## Page Lists / 页面清单
 ### Games / 小游戏：
-#### [Gaytou（龟逃）](https://ferryyoungfan.github.io/games/GayTou.html)
+#### [Guitao（龟逃）](https://ferryyoungfan.github.io/games/GayTou.html)
 一个考验反应力和快速决策能力的小游戏，推荐使用电脑+鼠标玩。
 <br/><br/><br/>
 ### Projects / 小项目：

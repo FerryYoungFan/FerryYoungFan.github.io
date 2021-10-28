@@ -9,6 +9,9 @@
             font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
             -webkit-text-size-adjust: none !important;
         }
+        body {
+            background-color: rgb(20, 20, 20);
+        }
         a {
             color:#ffe970;
             transition: 0.3s;
@@ -16,20 +19,20 @@
         a:hover {
             color:white;
         }
-        body {
+
+        #boxViewWrap {
             margin: 0 auto;
             width: 600px;
-            background-color: rgb(20, 20, 20);
         }
 
-        body>h2 {
+        #boxViewWrap>h2 {
             font-size: 30px;
             margin-top: 15px;
             text-align: center;
             color: #ffe970;
         }
 
-        body>h4 {
+        #boxViewWrap>h4 {
             font-size: 16px;
             font-weight: normal;
             text-align: right;
@@ -38,7 +41,7 @@
             margin-bottom: 5px;
         }
 
-        body>div {
+        #boxViewWrap>div {
             margin-bottom: 5px;
             margin-left: auto;
             margin-right: auto;
@@ -244,6 +247,8 @@
 </head>
 
 <body>
+    <div id="container">
+        <div id="boxViewWrap">
     <h2>Beamforming Basics - Array Factor (dB)</h2>
     <div id="displayDiv" class="display">
         <svg id="display" xmlns="http://www.w3.org/2000/svg">
@@ -863,6 +868,7 @@
     <h4><a href="https://ferryyoungfan.github.io">https://ferryyoungfan.github.io</a></h4>
     <h4 style="color: white;">V1.1 2021.10.27  Designed in Ericsson</h4>
     <br /><br /><br />
+    </div></div>
 </body>
 
 <script type="text/javascript">
@@ -1313,20 +1319,25 @@ window.onload = function () {
             winHeight = document.documentElement.clientHeight;
             winWidth = document.documentElement.clientWidth;
         }
+        let ratio = 1;
         if (winHeight / winWidth > 1.2) {
             // Maybe a cell phone?
-            document.body.style.transformOrigin = "50% 0";
-            document.body.style.transform = "scale("+ (winWidth / 610) +")";
+            ratio = (winWidth / 610);
+            console.log("cell" + ratio);
         } else {
             // Maybe a PC?
-            document.body.style.transformOrigin = "50% 0";
-            document.body.style.transform = "scale("+ (winHeight / 800) +")";
+            ratio = (winHeight / 800);
+            console.log("pc" + ratio);
         }
+        
+        elem("boxViewWrap").setAttribute("style", "height: " + (elem("boxViewWrap").clientHeight * ratio ) + "px");
+        elem("boxViewWrap").style.transformOrigin = "50% 0";
+        elem("boxViewWrap").style.transform = "scale("+ ratio +")";
     }
 
-    autoScalling();
     updatePlot();
-}
+    autoScalling();
+}  
 
 </script>
 

@@ -1328,9 +1328,8 @@ window.onload = function () {
             // Maybe a PC?
             ratio = (winHeight / 800);
             console.log("pc" + ratio);
+            elem("boxViewWrap").setAttribute("style", "height: " + (elem("boxViewWrap").clientHeight * ratio ) + "px");
         }
-        
-        elem("boxViewWrap").setAttribute("style", "height: " + (elem("boxViewWrap").clientHeight * ratio ) + "px");
         elem("boxViewWrap").style.transformOrigin = "50% 0";
         elem("boxViewWrap").style.transform = "scale("+ ratio +")";
     }

@@ -1315,10 +1315,12 @@ window.onload = function () {
         }
         if (winHeight / winWidth > 1.2) {
             // Maybe a cell phone?
-            document.body.style.zoom = winWidth / 610;
+            document.body.style.transformOrigin = "50% 0";
+            document.body.style.transform = "scale("+ (winWidth / 610) +")";
         } else {
             // Maybe a PC?
-            document.body.style.zoom = winHeight / 800;
+            document.body.style.transformOrigin = "50% 0";
+            document.body.style.transform = "scale("+ (winHeight / 800) +")";
         }
     }
 
